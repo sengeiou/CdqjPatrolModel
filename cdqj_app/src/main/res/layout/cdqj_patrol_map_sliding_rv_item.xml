@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:background="@drawable/map_sliding_item_unselect"
+        android:id="@+id/gv_main_item_rl"
+        app:layout_constraintLeft_toLeftOf="@+id/gv_main_item_text"
+        app:layout_constraintRight_toRightOf="@+id/gv_main_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_margin="@dimen/dp_15"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/gv_main_item_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" android:scaleType="fitXY"
+            android:src="@mipmap/icon_personnel" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/gv_main_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_theme"
+        android:lines="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gv_main_item_rl"
+        android:gravity="center"
+        android:text="巡检片区" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,134 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'realm-android'
+
+android {
+
+    def versions = rootProject.ext.versions
+    def android = rootProject.ext.android
+
+    compileSdkVersion versions.sdkCompileVersion
+    defaultConfig {
+//        applicationId android.appId
+        minSdkVersion versions.sdkMinVersion
+        targetSdkVersion versions.sdkTargetVersion
+        versionCode versions.appVersionCode
+        versionName versions.appVersionName
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains' , module:'annotations'
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    def dependencies = rootProject.ext.deps
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation dependencies.suport.appcompat
+    implementation dependencies.suport.appcompatV4
+    //    implementation dependencies.suport.constraint
+    implementation dependencies.suport.design
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation dependencies.suport.junit
+    androidTestImplementation dependencies.suport.test_runner
+    androidTestImplementation dependencies.suport.test_espresso
+    implementation dependencies.suport.recyclerview_animators
+    implementation dependencies.suport.rxpermissions
+    implementation dependencies.suport.rxjava2
+    implementation dependencies.suport.rxandroid2
+    implementation dependencies.suport.rxjava
+    implementation dependencies.suport.rxandroid
+    implementation dependencies.suport.retrofit2
+    implementation dependencies.suport.converter_gson
+    implementation dependencies.suport.adapter_rxjava
+    implementation dependencies.suport.okhttp
+    implementation dependencies.suport.logging_interceptor
+    implementation dependencies.suport.stetho_okhttp3
+    implementation dependencies.suport.gson
+    implementation dependencies.suport.logger
+    // 注解
+    //    annotationProcessor dependencies.suport.butterknifeCompiler
+    //    implementation dependencies.suport.butterknife
+    //适配器
+    implementation dependencies.suport.BaseRecyclerViewAdapterHelper
+    // FlycoTabLayout
+    implementation dependencies.suport.FlycoTabLayout_Lib
+    implementation dependencies.suport.okhttp3
+    implementation dependencies.suport.okdownload
+    implementation dependencies.suport.okdownloadOk
+    implementation dependencies.suport.okdownloadSq
+    implementation dependencies.suport.utilcode
+    //        implementation dependencies.suport.dialogplus
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation dependencies.suport.easing
+    implementation dependencies.suport.androidanimations
+    implementation dependencies.suport.annotations_java5
+    implementation dependencies.suport.SmartRefreshLayout
+    implementation dependencies.suport.SmartRefreshHeader
+    //    implementation (dependencies.suport.PictureSelector) {
+    //        exclude group: 'com.android.support.constraint'
+    //    }
+    implementation dependencies.suport.arcgis
+    //implementation dependencies.suport.slidinguppanel
+    implementation dependencies.suport.PickerView
+    // implementation dependencies.suport.yinglanscrolllayout
+    implementation dependencies.suport.ImagePreview
+    //        implementation dependencies.suport.rxandroidaudio
+    //        implementation dependencies.suport.AudioProcessor
+    implementation dependencies.suport.background
+    implementation dependencies.suport.eventbus
+    implementation dependencies.suport.jsbridge
+    implementation dependencies.suport.barlibrary
+    implementation dependencies.suport.zxing
+
+    implementation 'com.zhy:base-adapter:3.0.3'
+    implementation 'com.github.lygttpod:SuperTextView:2.2.4'
+    implementation 'com.zyao89:zloading:1.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    // 相片选择
+    implementation project(':picture_library')
+
+    implementation files('src/main/jniLibs/BaiduLBS_Android.jar')
+    implementation files('src/main/jniLibs/BaiduTraceSDK_v3_0_7.jar')
+}

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/toolbar_space"
+    tools:context=".view.ui.plan.PlanFormulateDetailActivity">
+    
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+
+    <TextView
+        android:id="@+id/toolbar_space"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/plan_formulate_main_cl"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space">
+
+        <com.esri.arcgisruntime.mapping.view.MapView
+            android:id="@+id/plan_formulate_map"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_main_cl"
+            app:layout_constraintLeft_toLeftOf="@id/plan_formulate_main_cl"
+            app:layout_constraintRight_toRightOf="@id/plan_formulate_main_cl"
+            app:layout_constraintTop_toTopOf="@id/plan_formulate_main_cl" />
+
+        <ImageView
+            style="@style/card_radius_style_2"
+            android:id="@+id/plan_map_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/map_view_margin"
+            android:layout_marginBottom="70dp"
+            android:padding="13dp"
+            android:src="@mipmap/icon_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            style="@style/card_radius_style_2"
+            android:id="@+id/plan_map_full_extent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/map_view_margin"
+            android:padding="13dp"
+            android:src="@mipmap/icon_map_full_extent"
+            app:layout_constraintTop_toTopOf="@+id/plan_map_gps"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/plan_formulate_top_line"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="horizontal"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:elevation="@dimen/elevation_dp_to"
+            android:id="@+id/plan_formulate_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/stroke_bg_radius_top"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/plan_formulate_top_line"
+            app:layout_constraintBottom_toBottomOf="@id/plan_formulate_main_cl"
+            app:layout_constraintLeft_toLeftOf="@id/plan_formulate_main_cl"
+            app:layout_constraintRight_toRightOf="@id/plan_formulate_main_cl">
+
+            <TextView
+                android:id="@+id/plan_formulate_area"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="片区-网格A1"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintTop_toTopOf="@id/plan_formulate_cl" />
+
+            <TextView
+                android:id="@+id/plan_formulate_distance"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="距离10000m"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_area"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_area" />
+
+            <TextView
+                android:id="@+id/plan_formulate_address"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginStart="@dimen/map_view_margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="少陵路19号(巡检一片区)..."
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_distance"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_area" />
+
+            <TextView
+                android:id="@+id/plan_formulate_line"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@id/plan_formulate_cl"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_address" />
+
+            <TextView
+                android:id="@+id/plan_formulate_people_title"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="执行人"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintRight_toLeftOf="@+id/plan_formulate_line_people"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_line" />
+
+            <TextView
+                android:id="@+id/plan_formulate_people"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:hint="请选择"
+                android:lines="1"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@+id/plan_formulate_people_title"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_people_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_line_people"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/line"
+                android:textColor="@color/text_auxiliary"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_people"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_people_title"
+                app:layout_constraintRight_toLeftOf="@+id/plan_formulate_start_time_title"
+                app:layout_constraintTop_toTopOf="@+id/plan_formulate_people_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_start_time_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="开始时间"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_people_title"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_line_people"
+                app:layout_constraintRight_toLeftOf="@+id/plan_formulate_line_time"
+                app:layout_constraintTop_toTopOf="@+id/plan_formulate_people_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_start_time"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请选择"
+                android:lines="1"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_start_time_title"
+                app:layout_constraintRight_toRightOf="@+id/plan_formulate_start_time_title"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_start_time_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_line_time"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/line"
+                android:textColor="@color/text_auxiliary"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_start_time"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_start_time_title"
+                app:layout_constraintRight_toLeftOf="@+id/plan_formulate_end_time_title"
+                app:layout_constraintTop_toTopOf="@+id/plan_formulate_people_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_end_time_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="完成时间"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_people_title"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_line_time"
+                app:layout_constraintRight_toRightOf="@id/plan_formulate_cl"
+                app:layout_constraintTop_toTopOf="@+id/plan_formulate_people_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_end_time"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请选择"
+                android:lines="1"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_end_time_title"
+                app:layout_constraintRight_toRightOf="@+id/plan_formulate_end_time_title"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_end_time_title" />
+
+            <TextView
+                android:id="@+id/plan_formulate_line_there"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_4"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@id/plan_formulate_cl"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_end_time" />
+
+            <TextView
+                android:id="@+id/plan_formulate_task_title"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_height="wrap_content"
+                android:text="任务内容"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@+id/plan_formulate_cl"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_line_there" />
+
+            <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                android:id="@+id/plan_formulate_task"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/plan_formulate_line_bottom"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@id/plan_formulate_cl"
+                app:layout_constraintTop_toBottomOf="@+id/plan_formulate_task_title"/>
+
+            <TextView
+                android:id="@+id/plan_formulate_line_bottom"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_marginBottom="@dimen/map_view_margin_8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                app:layout_constraintBottom_toTopOf="@+id/plan_formulate_esc"
+                app:layout_constraintLeft_toLeftOf="@id/plan_formulate_cl"
+                app:layout_constraintRight_toRightOf="@id/plan_formulate_cl" />
+
+            <TextView
+                android:id="@+id/plan_formulate_esc"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_them_round_transparent"
+                android:gravity="center"
+                android:paddingBottom="@dimen/map_view_margin_8"
+                android:paddingTop="@dimen/map_view_margin_8"
+                android:text="取消"
+                android:textColor="@color/theme_one"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_cl"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="@+id/plan_formulate_cl"
+                app:layout_constraintRight_toLeftOf="@+id/plan_formulate_submit" />
+
+            <TextView
+                android:id="@+id/plan_formulate_submit"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_them_round"
+                android:gravity="center"
+                android:paddingBottom="@dimen/map_view_margin_8"
+                android:paddingTop="@dimen/map_view_margin_8"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintBottom_toBottomOf="@+id/plan_formulate_cl"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/plan_formulate_esc"
+                app:layout_constraintRight_toRightOf="@+id/plan_formulate_cl" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

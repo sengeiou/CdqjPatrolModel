@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.ui.MapPipelineDetailActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+
+    <TextView
+        android:id="@+id/toolbar_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/map_pipeline_refreshLayout"
+        app:layout_constraintBottom_toTopOf="@+id/map_hd_space_to"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srlAccentColor="@color/white"
+        app:srlEnablePreviewInEditMode="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/map_pipeline_cl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_marginEnd="@dimen/map_view_margin_8"
+                android:layout_marginStart="@dimen/map_view_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/map_line_info"
+                layout="@layout/cdqj_patrol_map_line_info" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/toolbar_space_to"
+                app:layout_constraintTop_toBottomOf="@+id/map_line_info"
+                android:layout_width="0dp"
+                android:layout_height="3dp"
+                android:background="@color/toolbar_space"/>
+
+            <FrameLayout
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar_space_to"
+                app:layout_constraintBottom_toBottomOf="@+id/map_pipeline_cl"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:id="@+id/map_pipeline_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/map_hd_space_to"
+        android:layout_width="match_parent"
+        android:background="@color/line"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/map_detail_bottom_bar"
+        />
+
+    <include
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:id="@+id/map_detail_bottom_bar"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/cdqj_patrol_map_detail_bottom_bar"/>
+</android.support.constraint.ConstraintLayout>

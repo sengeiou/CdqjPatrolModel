@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    style="@style/card_radius_style_2"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/map_person_item_title"
+        android:text="李四"
+        style="@style/toolbar_title_text"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/text_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_person_item_title"
+        android:id="@+id/map_person_item_address"
+        android:text="位于：少陵路19号"
+        android:layout_marginTop="@dimen/map_view_margin"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_theme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/map_person_item_address"
+        android:id="@+id/map_person_item_update"
+        android:text="2018-09-06 10:30 上报"
+        android:layout_marginTop="@dimen/map_view_margin"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:textSize="@dimen/text_small"
+        android:textColor="@color/text_auxiliary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/map_person_item_line"
+        android:layout_marginTop="@dimen/map_view_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_person_item_update"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:visibility="gone"
+        android:drawableEnd="@mipmap/icon_gps"
+        android:id="@+id/map_person_item_see"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_theme"
+        android:paddingEnd="@dimen/dp_6"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_2"
+        android:text="查看位置"
+        app:layout_constraintTop_toBottomOf="@+id/map_person_item_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

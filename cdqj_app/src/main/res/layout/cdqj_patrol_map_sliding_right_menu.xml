@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="35dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/map_sliding_right_type"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <com.cdqj.cdqjpatrolandroid.comstomview.CustomGridView
+                    android:id="@+id/map_sliding_right_type_gv"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/map_view_margin"
+                    android:layout_marginBottom="@dimen/map_view_margin"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/map_sliding_right_type"
+                android:id="@+id/map_sliding_right_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/map_sliding_right_type_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/map_layer_bk"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:contentDescription="TODO" android:src="@mipmap/icon_layer_area" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="区域"
+                        android:textColor="@color/text_theme"
+                        android:textSize="@dimen/text_title" />
+                </LinearLayout>
+
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:layout_below="@+id/map_sliding_right_type_title"
+                    android:id="@+id/map_sliding_right_area_gv"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/map_view_margin"
+                    android:layout_marginBottom="@dimen/map_view_margin"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/map_sliding_right_pip"
+                android:layout_below="@+id/map_sliding_right_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/map_sliding_right_pip_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/map_layer_bk"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:contentDescription="TODO" android:src="@mipmap/icon_layer_personnel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="人员"
+                        android:textColor="@color/text_theme"
+                        android:textSize="@dimen/text_title" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/map_sliding_right_pip_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/gray"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="列表"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:layout_below="@+id/map_sliding_right_pip_title"
+                    android:id="@+id/map_sliding_right_pip_gv"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/map_view_margin"
+                    android:layout_marginBottom="@dimen/map_view_margin"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/map_sliding_right_pip"
+                android:id="@+id/map_sliding_right_obj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/map_sliding_right_obj_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/map_layer_bk"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:contentDescription="TODO" android:src="@mipmap/icon_layer_importance_object" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="管理"
+                        android:textColor="@color/text_theme"
+                        android:textSize="@dimen/text_title" />
+                </LinearLayout>
+
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:layout_below="@+id/map_sliding_right_obj_title"
+                    android:id="@+id/map_sliding_right_obj_gv"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/map_view_margin"
+                    android:layout_marginBottom="@dimen/map_view_margin"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_below="@id/map_sliding_right_obj"
+                android:id="@+id/map_sliding_right_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/map_sliding_right_other_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/map_layer_bk"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:contentDescription="TODO" android:src="@mipmap/icon_layer_importance_object" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="其他图层"
+                        android:textColor="@color/text_theme"
+                        android:textSize="@dimen/text_title" />
+                </LinearLayout>
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:layout_below="@+id/map_sliding_right_other_title"
+                    android:id="@+id/map_sliding_right_other_gv"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:layout_marginRight="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/map_view_margin"
+                    android:layout_marginBottom="@dimen/map_view_margin"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

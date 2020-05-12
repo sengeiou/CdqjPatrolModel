@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_marginBottom="@dimen/dp_6"
+        android:layout_marginTop="@dimen/dp_6"
+        android:background="@drawable/stroke_bg_radius_and_gradient_theme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableEnd="@mipmap/icon_goto"
+        android:drawableStart="@mipmap/icon_plan_task"
+        android:id="@+id/btn_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/standard_margin"
+        android:text="计划制定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_title" />
+
+</android.support.constraint.ConstraintLayout>

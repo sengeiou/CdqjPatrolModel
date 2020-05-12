@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/map_update_bottom_sheet"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="150dp"
+    android:padding="@dimen/map_view_margin"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@drawable/stroke_bg_radius_top">
+
+    <include layout="@layout/cdqj_patrol_map_update_hd_window"
+        android:visibility="gone"/>
+    <include layout="@layout/cdqj_patrol_map_update_site_window"
+        android:visibility="gone"/>
+    <include layout="@layout/cdqj_patrol_map_update_dev_window"
+        android:visibility="gone"/>
+    <include layout="@layout/cdqj_patrol_map_update_point_window"
+        android:visibility="gone"/>
+
+</RelativeLayout>

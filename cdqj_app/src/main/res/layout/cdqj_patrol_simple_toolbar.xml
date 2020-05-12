@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/simple_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@drawable/shape_gradient_toolbar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    <!--android:layout_height="?attr/actionBarSize"-->
+
+    <TextView
+        android:id="@+id/simple_title_back"
+        style="@style/toolbar_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableStart="@mipmap/icon_left_back"
+        android:paddingStart="@dimen/map_view_margin"
+        android:paddingEnd="@dimen/standard_margin"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:maxLines="1"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal" />
+
+    <TextView
+        android:id="@+id/simple_title_name"
+        style="@style/toolbar_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_title" />
+
+    <TextView
+        android:id="@+id/simple_title_rightTv"
+        style="@style/toolbar_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:paddingStart="@dimen/standard_margin"
+        android:paddingEnd="@dimen/map_view_margin"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_normal" />
+</android.support.v7.widget.Toolbar>

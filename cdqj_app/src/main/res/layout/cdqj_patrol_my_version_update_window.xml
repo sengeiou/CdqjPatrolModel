@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@drawable/stroke_bg_radius"
+        android:id="@+id/window_cl"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:elevation="@dimen/elevation_dp"
+            android:id="@+id/window_title_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/stroke_bg_radius_them_to_top"
+            app:layout_constraintBottom_toTopOf="@+id/window_content_cl"
+            app:layout_constraintLeft_toLeftOf="@+id/window_cl"
+            app:layout_constraintRight_toRightOf="@+id/window_cl"
+            app:layout_constraintTop_toTopOf="@+id/window_cl"
+            app:layout_constraintVertical_weight="1">
+
+            <TextView
+                android:id="@+id/window_version_title"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发现新版本"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title_bar"
+                app:layout_constraintLeft_toLeftOf="@+id/window_title_cl"
+                app:layout_constraintTop_toTopOf="@+id/window_title_cl" />
+
+            <TextView
+                android:layout_marginStart="@dimen/dp_4"
+                android:id="@+id/window_version_code"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V1.0.1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintLeft_toLeftOf="@+id/window_version_title"
+                app:layout_constraintTop_toBottomOf="@+id/window_version_title" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/window_content_cl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/window_cl"
+            app:layout_constraintLeft_toLeftOf="@+id/window_cl"
+            app:layout_constraintRight_toRightOf="@+id/window_cl"
+            app:layout_constraintTop_toBottomOf="@+id/window_title_cl"
+            app:layout_constraintVertical_weight="2">
+
+            <TextView
+                android:id="@+id/window_content_title"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更新内容:"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintLeft_toLeftOf="@+id/window_content_cl"
+                app:layout_constraintTop_toTopOf="@+id/window_content_cl" />
+
+            <TextView
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:id="@+id/window_content"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/dp_4"
+                android:text="1.台帐列表优化，更方便筛选工单；2.台帐列表优化，更方便筛选工单；3.台帐列表优化，更方便筛选工单；4.台帐列表优化，更方便筛选工单；"
+                android:textColor="@color/text_gray"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintRight_toRightOf="@+id/window_content_cl"
+                app:layout_constraintLeft_toLeftOf="@+id/window_content_title"
+                app:layout_constraintTop_toBottomOf="@+id/window_content_title" />
+
+            <TextView
+                android:id="@+id/window_update_btn"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_them_round"
+                android:elevation="@dimen/elevation_dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/map_view_margin_8"
+                android:paddingTop="@dimen/map_view_margin_8"
+                android:text="立即更新"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_title_bar"
+                app:layout_constraintBottom_toBottomOf="@+id/window_content_cl"
+                app:layout_constraintLeft_toLeftOf="@+id/window_content_cl"
+                app:layout_constraintRight_toRightOf="@+id/window_content_cl"
+                app:layout_constraintTop_toBottomOf="@+id/window_content" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:contentDescription="TODO" android:src="@mipmap/icon_rocket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/window_esc"
+        android:contentDescription="TODO" android:padding="@dimen/map_view_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/icon_esc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

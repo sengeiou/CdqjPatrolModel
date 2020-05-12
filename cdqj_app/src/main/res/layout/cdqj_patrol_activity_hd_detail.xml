@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.ledger.HdDetailActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+    <TextView
+        android:id="@+id/toolbar_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tl:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_line"
+        android:id="@+id/hd_refreshLayout"
+        app:srlAccentColor="@color/white"
+        app:srlEnablePreviewInEditMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <include
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:id="@+id/hd_info"
+                layout="@layout/cdqj_patrol_map_hd_info"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/hd_detail_other"
+                app:layout_constraintBottom_toBottomOf="@+id/hd_info"
+                app:layout_constraintTop_toBottomOf="@+id/hd_info"
+                android:src="@mipmap/icon_detail_more"
+                android:clickable="true"
+                tl:fabSize="mini"
+                app:borderWidth="0dp"
+                android:backgroundTint="@color/theme_one"
+                app:rippleColor="@color/btn_bg_end"
+                app:pressedTranslationZ="12dp"
+                app:layout_constraintLeft_toLeftOf="@+id/hd_info"
+                app:layout_constraintRight_toRightOf="@+id/hd_info"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/hd_detail_other_rv"
+                tl:layout_constraintTop_toBottomOf="@+id/hd_detail_other"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"/>
+
+            <com.flyco.tablayout.SegmentTabLayout
+                android:layout_marginTop="@dimen/status_bar_height"
+                tl:layout_constraintTop_toBottomOf="@+id/hd_detail_other_rv"
+                tl:layout_constraintLeft_toLeftOf="parent"
+                tl:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/hd_list_tab"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/top_bar_height_36"
+                android:background="@color/white"
+                android:paddingStart="@dimen/map_view_margin"
+                android:paddingEnd="@dimen/map_view_margin"
+                tl:tl_bar_color="@color/white"
+                tl:tl_indicator_anim_enable="true"
+                tl:tl_indicator_color="@color/theme_one"
+                tl:tl_indicator_margin_bottom="@dimen/dp_2"
+                tl:tl_indicator_margin_left="@dimen/dp_2"
+                tl:tl_indicator_margin_right="@dimen/dp_2"
+                tl:tl_indicator_margin_top="@dimen/dp_2"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/hd_vp"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                tl:layout_constraintLeft_toLeftOf="parent"
+                tl:layout_constraintRight_toRightOf="parent"
+                tl:layout_constraintTop_toBottomOf="@+id/hd_list_tab"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</android.support.constraint.ConstraintLayout>

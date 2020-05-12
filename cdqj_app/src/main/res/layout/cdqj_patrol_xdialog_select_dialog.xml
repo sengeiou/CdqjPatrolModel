@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/stroke_bg_radius">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_bg_radius_them_to_top"
+            android:gravity="center"
+            android:paddingTop="@dimen/map_view_margin"
+            android:paddingBottom="@dimen/map_view_margin"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title_bar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/map_view_margin_8"
+            android:background="@null"
+            android:gravity="start"
+            android:lineSpacingExtra="@dimen/dp_6"
+            android:minHeight="100dp"
+            android:padding="@dimen/dp_4"
+            android:text=""
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/dialog_plus_line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/map_view_margin_8"
+            android:background="@color/line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_content" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:background="@drawable/stroke_bg_radius_them_to_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_plus_line">
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                style="@style/toolbar_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/map_view_margin"
+                android:text="确认"
+                android:textColor="@color/theme_one"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/tv_cancel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/confirm_select_space"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_marginBottom="@dimen/map_view_margin_8"
+                android:background="@color/line"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_confirm"
+                app:layout_constraintLeft_toRightOf="@+id/tv_cancel"
+                app:layout_constraintRight_toLeftOf="@+id/tv_confirm"
+                app:layout_constraintTop_toTopOf="@+id/tv_confirm" />
+
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/toolbar_title_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/map_view_margin_8"
+                android:text="取消"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_confirm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tv_confirm"
+                app:layout_constraintTop_toTopOf="@+id/tv_confirm" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>

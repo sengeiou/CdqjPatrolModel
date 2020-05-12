@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:paddingEnd="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:id="@+id/map_bottom_bar_map"
+        android:drawableStart="@mipmap/icon_view"
+        android:drawablePadding="@dimen/dp_4"
+        app:layout_constraintTop_toTopOf="@+id/map_bottom_bar_navigation"
+        app:layout_constraintBottom_toBottomOf="@+id/map_bottom_bar_navigation"
+        android:text="查看地图"
+        android:gravity="center"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_theme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/map_bottom_bar_report"
+        android:layout_marginEnd="@dimen/map_view_margin_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_bg_radius_them_round_transparent"
+        android:drawableStart="@mipmap/icon_update"
+        android:drawablePadding="@dimen/map_view_margin_8"
+        android:paddingBottom="@dimen/map_view_margin_8"
+        android:paddingEnd="@dimen/dp_25"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingTop="@dimen/map_view_margin_8"
+        android:text="上报"
+        android:textColor="@color/theme_one"
+        android:textSize="@dimen/text_title"
+        app:layout_constraintTop_toTopOf="@+id/map_bottom_bar_navigation"
+        app:layout_constraintBottom_toBottomOf="@+id/map_bottom_bar_navigation"
+        app:layout_constraintRight_toLeftOf="@+id/map_bottom_bar_navigation" />
+
+    <TextView
+        android:layout_marginTop="@dimen/map_view_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_bg_radius_them_round"
+        android:drawableStart="@mipmap/icon_navigation"
+        android:drawablePadding="@dimen/map_view_margin_8"
+        android:paddingBottom="@dimen/map_view_margin_8"
+        android:paddingEnd="@dimen/dp_25"
+        android:paddingStart="@dimen/dp_25"
+        android:paddingTop="@dimen/map_view_margin_8"
+        android:text="导航"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_title"
+        android:id="@+id/map_bottom_bar_navigation"
+        app:layout_constraintBottom_toBottomOf="@+id/map_line_dialog_view"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

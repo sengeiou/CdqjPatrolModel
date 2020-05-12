@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/dialog_plus_item_esc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:text="取  消"
+        android:textColor="@color/theme_one"
+        android:textSize="@dimen/text_normal" />
+    <TextView
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:background="@color/theme_one"
+        android:layout_width="1dp"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/dialog_plus_item_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:text="确  认"
+        android:textColor="@color/theme_one"
+        android:textSize="@dimen/text_normal" />
+</LinearLayout>

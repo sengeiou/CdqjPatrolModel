@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:scrollbars="none"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintBottom_toBottomOf="@+id/supervise_report_title"
+            android:id="@+id/supervise_report_ecs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" android:padding="@dimen/dp_5"
+            android:src="@mipmap/icon_down" />
+
+        <TextView
+            android:id="@+id/supervise_report_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/toolbar_title_text"
+            android:padding="@dimen/dp_5"
+            android:text="监护上报"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/supervise_report_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="提交"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/supervise_report_title"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            style="@style/toolbar_title_text"
+            android:id="@+id/supervise_report_picture_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍照"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_submit" />
+
+        <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+            android:id="@+id/supervise_report_picture_gv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_picture_title"/>
+
+        <TextView
+            style="@style/toolbar_title_text"
+            android:id="@+id/supervise_report_voice_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_picture_gv" />
+
+        <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+            android:id="@+id/supervise_report_audio_gv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_voice_title"/>
+
+        <TextView
+            style="@style/toolbar_title_text"
+            android:id="@+id/supervise_report_video_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_audio_gv" />
+
+        <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+            android:id="@+id/supervise_report_video_gv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_video_title"/>
+
+
+        <TextView
+            style="@style/toolbar_title_text"
+            android:id="@+id/supervise_report_remark_title"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="描述"
+            android:visibility="gone"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_video_gv" />
+
+        <EditText
+            app:layout_constraintVertical_bias="0"
+            android:id="@+id/supervise_report_remark"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stroke_bg_radius"
+            android:gravity="start"
+            android:hint="详情描述（非必填）"
+            android:inputType="" android:minHeight="@dimen/dp_72"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal_13"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supervise_report_remark_title" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

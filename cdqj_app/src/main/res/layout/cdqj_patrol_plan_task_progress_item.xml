@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:padding="@dimen/dp_5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        app:layout_constraintHorizontal_weight="3"
+        android:id="@+id/task_progress"
+        android:gravity="end|bottom"
+        android:text="9999"
+        android:textSize="@dimen/text_large_28"
+        app:layout_constraintLeft_toLeftOf="@+id/task_progress_name"
+        app:layout_constraintRight_toLeftOf="@+id/task_progress_symbol"
+        android:textColor="@color/theme_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginBottom="@dimen/dp_4"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/task_progress_symbol"
+        android:gravity="start"
+        android:text="%"
+        android:textColor="@color/theme_one"
+        app:layout_constraintRight_toRightOf="@+id/task_progress_name"
+        app:layout_constraintLeft_toRightOf="@+id/task_progress"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintBottom_toBottomOf="@+id/task_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingEnd="@dimen/dp_25"
+        android:paddingStart="@dimen/dp_25"
+        android:id="@+id/task_progress_name"
+        android:gravity="center"
+        android:text="巡检点"
+        android:textColor="@color/text_theme"
+        app:layout_constraintTop_toBottomOf="@+id/task_progress"
+        android:textSize="@dimen/text_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

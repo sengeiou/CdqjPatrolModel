@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_bar_height">44dp</dimen><!--通用文字栏高度-->
+
+    <dimen name="status_bar_height">20dp</dimen>
+    <dimen name="view_margin_status_bar_height">32dp</dimen>
+    <dimen name="bottom_bar_height">60dp</dimen>
+    <dimen name="top_bar_height">48dp</dimen>
+    <dimen name="top_bar_height_36">36dp</dimen>
+    <dimen name="map_view_margin">12dp</dimen>
+    <dimen name="map_view_margin_8">8dp</dimen>
+    <dimen name="margin_ll_left">10dp</dimen>
+    <dimen name="margin_ll_right">10dp</dimen>
+
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_17">17dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_25">25dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+    <dimen name="dp_5">5dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+
+    <!--文字大小-->
+    <dimen name="text_large_28">28sp</dimen>
+    <dimen name="text_large_20">20sp</dimen>
+    <dimen name="text_large_35">35sp</dimen>
+    <dimen name="text_title_bar">16sp</dimen>
+    <dimen name="text_title">15sp</dimen>
+    <dimen name="text_bottom_title">11sp</dimen>
+    <dimen name="text_normal">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_normal_13">13sp</dimen>
+    <dimen name="text_auxiliary">10sp</dimen>
+
+    <!--阴影-->
+    <dimen name="elevation_dp">2dp</dimen>
+    <dimen name="elevation_dp_to">6sp</dimen>
+
+    <!--登录界面边距-->
+    <dimen name="login_margin_dp">50sp</dimen>
+    <dimen name="login_margin_end_dp">80sp</dimen>
+
+    <dimen name="standard_margin">16dp</dimen>
+</resources>

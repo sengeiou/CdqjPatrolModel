@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cdqj.cdqjpatrolandroid">
+
+    <!-- 允许弹窗 提示权限 -->
+    <uses-permission android:name="android.permission.TYPE_APPLICATION_OVERLAY" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.TYPE_PHONE" />
+    <uses-permission android:name="android.permission.TYPE_TOAST" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 添加所需权限 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.GRANT_RUNTIME_PERMISSIONS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 8.0系统 获取 未知应用安装权限 -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/CdqjPatrolAppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning,RtlEnabled"
+        tools:targetApi="donut">
+
+        <!-- 百度定位 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="9BVy27x1lME8PFwbWYZWcsEcbQZs26CV" />
+
+        <provider
+            android:name=".utils.PatrolProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <!-- 全面屏适配，建议2.1往上，暂设2.1 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <receiver android:name=".service.NetWorkStateReceiver">
+            <intent-filter>
+
+                <!-- 检测网络变化的acton -->
+                <action android:name="android.NET.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.Net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- Service -->
+        <service android:name=".service.LocationService" />
+        <service android:name=".service.LocationUpdateService" />
+        <service android:name=".service.LocationTraceService" />
+        <!-- 百度定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 鹰眼轨迹 -->
+        <service
+            android:name="com.baidu.trace.LBSTraceService"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name=".view.ui.main.LoginActivity"
+            android:fitsSystemWindows="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Splash">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".view.ui.main.CdqjMainActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapPipelineDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.order.OrderDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.plan.PlanDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.plan.PlanFormulateDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.my.MsgFeedbackActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.my.OffLineDataActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.my.MsgListActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.main.SetActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapHdDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.order.PiesScreeningActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.ledger.HdDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.plan.PlanModifyActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.ledger.PlanLedgerListActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.plan.PlanLogActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapPlanDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapPersonDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapSiteDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.PersonTrajectoryMapActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.PersonListActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapDeviceDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".image.show.CustomImageShowActivity"
+            android:theme="@style/custom_picture" />
+        <activity android:name=".comstomview.appsetting.AppSettingsDialogHolderActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapUpdateActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.base.BaseMapUpdateActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.my.AppShareActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+        <activity android:name=".view.ui.map.MapCarDetailActivity"
+            android:theme="@style/CdqjPatrolAppTheme"/>
+    </application>
+
+</manifest>

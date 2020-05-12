@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:background="@drawable/stroke_bg_radius_them_to_top"
+        android:id="@+id/dialog_plus_title"
+        android:textColor="@color/white"
+        style="@style/toolbar_title_text"
+        android:gravity="center"
+        android:text="@string/app_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="50dp" />
+
+    <com.cdqj.cdqjpatrolandroid.comstomview.DrawableEditText
+        android:layout_margin="@dimen/map_view_margin"
+        android:textSize="@dimen/text_normal_13"
+        android:hint="请输入查询类容"
+        android:id="@+id/dialog_plus_search"
+        android:drawablePadding="@dimen/dp_4"
+        android:paddingStart="@dimen/standard_margin"
+        android:background="@drawable/stroke_bg_gray_round"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_plus_title"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="40dp" />
+
+</android.support.constraint.ConstraintLayout>

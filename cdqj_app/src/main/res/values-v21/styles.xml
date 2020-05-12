@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="card_ridius_style">
+        <item name="android:elevation">@dimen/elevation_dp</item>
+
+        android:elevation="@dimen/elevation_dp"
+        app:bl_corners_radius="@dimen/dp_6"
+        app:bl_solid_color="@color/white"
+    </style>
+
+    <style name="card_radius_style_2">
+        <item name="android:elevation">@dimen/elevation_dp</item>
+        <item name="bl_corners_radius">@dimen/dp_4</item>
+        <item name="bl_solid_color">@color/white</item>
+    </style>
+</resources>

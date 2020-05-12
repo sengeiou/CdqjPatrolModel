@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.main.CdqjMainActivity">
+
+    <include layout="@layout/cdqj_patrol_fragment_map_view"/>
+
+    <include layout="@layout/cdqj_patrol_base_map_update_bottom_sheet"/>
+
+    <TextView
+        android:id="@+id/tv_delete_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_color_red"
+        android:drawableTop="@drawable/picture_icon_delete"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/app_drag_delete"
+        android:textColor="@color/app_color_white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</android.support.design.widget.CoordinatorLayout>

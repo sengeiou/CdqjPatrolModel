@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bottom_bar_height"
+    android:id="@+id/fragment_order_list_xml"
+    android:background="@color/white"
+    tools:context=".view.ui.OrderListFragment">
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/order_list_tab"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/white"
+        tl:tl_iconVisible="false"
+        tl:tl_indicator_color="@color/theme_one"
+        tl:tl_indicator_corner_radius="2dp"
+        tl:tl_indicator_width="20dp"
+        tl:tl_textBold="SELECT"
+        tl:tl_textsize="@dimen/text_title_bar"
+        tl:tl_textSelectColor="@color/text_theme"
+        tl:tl_textUnselectColor="@color/text_auxiliary" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/order_list_vp"
+        android:layout_below="@+id/order_list_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

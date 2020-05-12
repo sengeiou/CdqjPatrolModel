@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_5"
+    android:paddingEnd="@dimen/dp_15"
+    android:paddingStart="@dimen/dp_15"
+    android:background="@drawable/toast_stroke_bg_radius"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:contentDescription="TODO" android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/toast_msg"
+        app:layout_constraintTop_toTopOf="@+id/toast_msg"
+        android:id="@+id/toast_img"
+        android:src="@mipmap/icon_toast_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/theme_one"
+        android:textSize="@dimen/text_title_bar"
+        android:layout_marginStart="@dimen/map_view_margin_8"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@+id/toast_img"
+        android:id="@+id/toast_msg"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

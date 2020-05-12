@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/dialog_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/dialog_plus_item_esc"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="取  消"
+            android:textColor="@drawable/btn_text_color"
+            android:textSize="14dp" />
+
+        <TextView
+            style="@style/toolbar_title_text"
+            android:id="@+id/dialog_plus_item_title"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:text="选择传入自定义标题"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/dialog_plus_item_submit"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="确  认"
+            android:textColor="@drawable/btn_text_color"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/dialog_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/line" />
+</android.support.constraint.ConstraintLayout>

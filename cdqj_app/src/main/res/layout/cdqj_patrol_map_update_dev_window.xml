@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/map_update_dev_window"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/update_dev_ecs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" android:padding="@dimen/dp_5"
+            android:src="@mipmap/icon_down"
+            app:layout_constraintBottom_toBottomOf="@+id/update_dev_title" />
+
+        <TextView
+            android:id="@+id/update_dev_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="设备纠错上报"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/update_dev_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="提交"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/update_dev_title"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/update_dev_type_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="设备"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_title" />
+
+        <EditText
+            android:id="@+id/update_dev_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType="" android:padding="@dimen/dp_5"
+            android:hint="请输入设备"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_type_title" />
+
+        <TextView
+            android:id="@+id/update_dev_address_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="修正地址"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_type" />
+
+        <EditText
+            android:id="@+id/update_dev_address"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType="" android:padding="@dimen/dp_5"
+            android:text=""
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintLeft_toLeftOf="@+id/update_dev_type"
+            app:layout_constraintRight_toRightOf="@+id/update_dev_type"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_address_title" />
+
+        <TextView
+            android:id="@+id/update_dev_gpsx_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="修正坐标X"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_address" />
+
+        <EditText
+            android:id="@+id/update_dev_gpsx"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/dp_5"
+            android:text=""
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintLeft_toLeftOf="@+id/update_dev_type"
+            app:layout_constraintRight_toRightOf="@+id/update_dev_type"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_gpsx_title" />
+
+        <TextView
+            android:id="@+id/update_dev_gpsy_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="修正坐标Y"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_gpsx" />
+
+        <EditText
+            android:id="@+id/update_dev_gpsy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/dp_5"
+            android:text=""
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintLeft_toLeftOf="@+id/update_dev_type"
+            app:layout_constraintRight_toRightOf="@+id/update_dev_type"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_gpsy_title" />
+
+        <TextView
+            android:id="@+id/update_dev_remark_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="设备描述"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_gpsy" />
+
+        <EditText
+            android:id="@+id/update_dev_remark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:background="@drawable/stroke_bg_radius"
+            android:gravity="start"
+            android:hint="详情描述（非必填）"
+            android:inputType="" android:minHeight="@dimen/dp_72"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/update_dev_type"
+            app:layout_constraintRight_toRightOf="@+id/update_dev_type"
+            app:layout_constraintTop_toBottomOf="@+id/update_dev_remark_title" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

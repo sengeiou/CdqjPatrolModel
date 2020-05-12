@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/cdqj_patrol_dialog_plus_header"
+        android:id="@+id/dialog_plus_header"/>
+
+    <com.cdqj.cdqjpatrolandroid.comstomview.MaxListView
+        android:divider="@null"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:background="@drawable/stroke_bg_radius_them_to_bottom_tans"
+        android:id="@+id/dialog_plus_list"
+        android:layout_below="@+id/dialog_plus_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <include
+        android:layout_below="@+id/dialog_plus_list"
+        layout="@layout/cdqj_patrol_dialog_plus_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dialog_plus_footer"/>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/line"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.my.AppShareActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+
+    <RelativeLayout
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="match_parent"
+        android:paddingTop="@dimen/standard_margin"
+        android:paddingBottom="@dimen/standard_margin"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/app_share_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_theme"
+            android:text="邀请他人扫码安装最新版本"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:contentDescription="TODO" android:src="@mipmap/ic_launcher"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_below="@+id/app_share_title"
+            android:id="@+id/app_share_img"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_below="@+id/app_share_img"
+            android:id="@+id/app_share_code"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_auxiliary"
+            android:text="当前版本号：V1.0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

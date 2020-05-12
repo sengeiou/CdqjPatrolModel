@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/stroke_bg_radius_them_to_bottom"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        style="@style/toolbar_title_text"
+        android:gravity="center"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textSize="@dimen/text_normal"
+        android:padding="@dimen/map_view_margin"
+        android:id="@+id/confirm_select_yes"
+        android:textColor="@color/white"
+        android:text="确认"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/confirm_select_no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/confirm_select_space"
+        android:layout_marginBottom="@dimen/map_view_margin_8"
+        android:layout_marginTop="@dimen/map_view_margin_8"
+        android:background="@color/white"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/confirm_select_no"
+        app:layout_constraintRight_toLeftOf="@+id/confirm_select_yes"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_select_yes"
+        app:layout_constraintTop_toTopOf="@+id/confirm_select_yes"
+        />
+
+
+    <TextView
+        style="@style/toolbar_title_text"
+        android:gravity="center"
+        android:textSize="@dimen/text_normal"
+        android:id="@+id/confirm_select_no"
+        android:padding="@dimen/map_view_margin_8"
+        android:textColor="@color/text_auxiliary"
+        android:text="取消"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/confirm_select_yes"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_select_yes"
+        app:layout_constraintTop_toTopOf="@+id/confirm_select_yes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>

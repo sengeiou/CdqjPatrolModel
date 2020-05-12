@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/map_line_dialog_title"
+        android:text="中压管线"
+        style="@style/toolbar_title_text"
+        android:textSize="@dimen/text_title"
+        android:textColor="@color/text_theme"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/map_line_dialog_title"
+        android:id="@+id/map_line_dialog_distance"
+        android:text="距离123456789米"
+        android:layout_marginTop="@dimen/map_view_margin"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_auxiliary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/map_line_dialog_distance"
+        android:id="@+id/map_line_dialog_address"
+        android:text="少陵路19号成都城市燃气有限公司少陵路19号成都城市燃气有限公司"
+        android:layout_marginTop="@dimen/map_view_margin"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_auxiliary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/map_line_dialog_line"
+        android:layout_marginTop="@dimen/map_view_margin"
+        app:layout_constraintRight_toRightOf="@+id/map_line_dialog_title"
+        app:layout_constraintLeft_toLeftOf="@+id/map_line_dialog_title"
+        app:layout_constraintTop_toBottomOf="@+id/map_line_dialog_address"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+</android.support.constraint.ConstraintLayout>

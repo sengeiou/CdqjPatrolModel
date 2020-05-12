@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.MapPlanDetailActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+    <TextView
+        android:id="@+id/toolbar_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        app:layout_constraintBottom_toTopOf="@+id/map_plan_space_to"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_line"
+        android:id="@+id/map_plan_refreshLayout"
+        app:srlAccentColor="@color/white"
+        app:srlEnablePreviewInEditMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/map_plan_detail_area"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="片区-网格A1"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_report_count"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_plan_item_blue"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_4"
+                android:paddingLeft="@dimen/map_view_margin_8"
+                android:paddingRight="@dimen/map_view_margin_8"
+                android:paddingTop="@dimen/dp_4"
+                android:text="上报次数：1次"
+                android:textColor="@color/theme_one"
+                android:textSize="@dimen/text_auxiliary"
+                app:layout_constraintBottom_toBottomOf="@+id/map_plan_detail_area"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_area"
+                app:layout_constraintTop_toTopOf="@+id/map_plan_detail_area" />
+
+            <TextView
+                android:id="@+id/map_plan_status_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_them_lower_left"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/map_view_margin"
+                android:paddingTop="@dimen/dp_5"
+                android:text="监护上报"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_distance"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="距离10000m"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintLeft_toLeftOf="@+id/map_plan_detail_area"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_area" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_address"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginStart="@dimen/map_view_margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="少陵路19号(巡检一片区)..."
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_distance"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_area" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_line"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_address" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_people_title"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="执行人"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/map_plan_detail_line_people"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_line" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_people"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="张三"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/map_plan_detail_people_title"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_people_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_line_people"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/line"
+                android:textColor="@color/text_auxiliary"
+                app:layout_constraintBottom_toBottomOf="@+id/map_plan_detail_people"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_people_title"
+                app:layout_constraintRight_toLeftOf="@+id/map_plan_detail_report_time_title"
+                app:layout_constraintTop_toTopOf="@+id/map_plan_detail_people_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_report_time_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="开始时间"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="@+id/map_plan_detail_people_title"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_line_people"
+                app:layout_constraintRight_toLeftOf="@+id/map_plan_detail_line_time"
+                app:layout_constraintTop_toTopOf="@+id/map_plan_detail_people_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_report_time"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2018.10.01"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="@+id/map_plan_detail_report_time_title"
+                app:layout_constraintRight_toRightOf="@+id/map_plan_detail_report_time_title"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_report_time_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_line_time"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/line"
+                android:textColor="@color/text_auxiliary"
+                app:layout_constraintBottom_toBottomOf="@+id/map_plan_detail_report_time"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_report_time_title"
+                app:layout_constraintRight_toLeftOf="@+id/map_plan_detail_end_time_title"
+                app:layout_constraintTop_toTopOf="@+id/map_plan_detail_people_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_end_time_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="最新时间"
+                android:textColor="@color/text_black_view_title"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintBottom_toBottomOf="@+id/map_plan_detail_people_title"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/map_plan_detail_line_time"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/map_plan_detail_people_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_end_time"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2018.10.01"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="@+id/map_plan_detail_end_time_title"
+                app:layout_constraintRight_toRightOf="@+id/map_plan_detail_end_time_title"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_end_time_title" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_line_to"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_end_time" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_time"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="任务周期:2018.10.01-8012.10.10"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_line_to" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_line_there"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_4"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_time" />
+
+            <TextView
+                android:id="@+id/map_plan_detail_task_title"
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_height="wrap_content"
+                android:text="任务内容"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_title"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_line_there" />
+
+            <TextView
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:id="@+id/map_plan_space"
+                android:layout_width="match_parent"
+                android:background="@color/line"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_detail_task_title" />
+
+            <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:id="@+id/map_plan_detail_rv"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_plan_space"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/map_plan_space_to"
+        android:layout_width="match_parent"
+        android:background="@color/line"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/map_detail_bottom_bar"
+        />
+
+    <include
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:id="@+id/map_detail_bottom_bar"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/cdqj_patrol_map_detail_bottom_bar"/>
+</android.support.constraint.ConstraintLayout>

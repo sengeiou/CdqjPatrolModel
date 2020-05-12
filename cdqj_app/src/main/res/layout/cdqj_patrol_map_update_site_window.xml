@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/map_update_site_window"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/update_site_ecs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" android:padding="@dimen/dp_5"
+            android:src="@mipmap/icon_down"
+            app:layout_constraintBottom_toBottomOf="@+id/update_site_title" />
+
+        <TextView
+            android:id="@+id/update_site_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="工地上报"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/update_site_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_5"
+            android:text="下一步"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintBottom_toBottomOf="@+id/update_site_title"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/update_site_name_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="工地名称"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_title" />
+
+        <EditText
+            android:layout_marginStart="@dimen/dp_5"
+            android:id="@+id/update_site_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType="" android:padding="@dimen/dp_5"
+            android:text=""
+            android:hint="请输入名称"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_name_title" />
+
+        <LinearLayout
+            android:id="@+id/update_site_basic_ll"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_name"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/update_site_type_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="工地级别"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_type"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/stroke_bg_radius_them_blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:drawableEnd="@mipmap/icon_down"
+                android:textColor="@color/text_theme" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/update_site_basic_ll"
+            android:id="@+id/update_site_dt_ll"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/update_site_xzqy_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="行政区域"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_xzqy"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/stroke_bg_radius_them_blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:drawableEnd="@mipmap/icon_down"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_sspq_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="所属片区"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_sspq"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/stroke_bg_radius_them_blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:drawableEnd="@mipmap/icon_down"
+                android:textColor="@color/text_theme" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            app:layout_constraintTop_toBottomOf="@+id/update_site_dt_ll"
+            android:id="@+id/update_site_lz_ll"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/update_site_conType_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="施工类型"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_conType"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/stroke_bg_radius_them_blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:drawableEnd="@mipmap/icon_down"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_propJhyy_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="监护原因"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_propJhyy"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/stroke_bg_radius_them_blue_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:drawableEnd="@mipmap/icon_down"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_otherType_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="其他工地类型"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:textSize="@dimen/text_normal"
+                android:hint="请输入"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_otherType"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_4"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_siteLeader_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="联系人"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:textSize="@dimen/text_normal"
+                android:hint="请输入"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_siteLeader"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_4"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_siteLeaderTel_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="联系人电话"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:textSize="@dimen/text_normal"
+                android:hint="请输入"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_siteLeaderTel"
+                android:inputType="number"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_4"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_propGdssqk_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="管道设施情况"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:textSize="@dimen/text_normal"
+                android:hint="请输入"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_propGdssqk"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_4"
+                android:textColor="@color/text_theme" />
+
+            <TextView
+                android:id="@+id/update_site_propGdmsqk_title"
+                style="@style/toolbar_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="管道埋深情况"
+                android:textColor="@color/text_theme"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:textSize="@dimen/text_normal"
+                android:hint="请输入"
+                android:padding="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/update_site_propGdmsqk"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_bg_radius_4"
+                android:textColor="@color/text_theme" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/update_site_address_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="工地地址"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_lz_ll" />
+
+        <EditText
+            android:layout_marginStart="@dimen/dp_5"
+            android:id="@+id/update_site_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:inputType=""
+            android:padding="@dimen/dp_5"
+            android:text=""
+            android:hint="请输入地址"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_address_title" />
+
+        <TextView
+            android:id="@+id/update_site_gps_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="工地坐标"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_address" />
+
+        <EditText
+            android:layout_marginStart="@dimen/dp_5"
+            android:id="@+id/update_site_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/stroke_bg_radius_4"
+            android:enabled="false"
+            android:inputType="" android:padding="@dimen/dp_5"
+            android:text="123,456"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_gps_title" />
+
+        <TextView
+            android:id="@+id/update_site_remark_title"
+            style="@style/toolbar_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="工地描述"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_gps" />
+
+        <EditText
+            android:layout_marginStart="@dimen/dp_5"
+            android:id="@+id/update_site_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:background="@drawable/stroke_bg_radius"
+            android:gravity="start"
+            android:hint="详情描述（非必填）"
+            android:inputType="" android:minHeight="@dimen/dp_72"
+            android:padding="@dimen/dp_5"
+            android:textColor="@color/text_theme"
+            android:textSize="@dimen/text_normal_13"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_site_remark_title" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

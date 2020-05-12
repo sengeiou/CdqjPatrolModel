@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/map_update_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        app:bl_corners_radius="@dimen/dp_72"
+        app:bl_solid_color="@color/white_trans"
+        android:contentDescription="TODO"
+        android:elevation="@dimen/elevation_dp"
+        android:id="@+id/map_update_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:layout_marginTop="50dp"
+        android:padding="13dp"
+
+        android:src="@mipmap/icon_left_back"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        style="@style/card_radius_style_2"
+        android:id="@+id/map_update_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:layout_marginBottom="70dp"
+        android:contentDescription="TODO" android:padding="13dp"
+        android:src="@mipmap/icon_location"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        style="@style/card_radius_style_2"
+        android:id="@+id/map_update_full_extent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:contentDescription="TODO"
+        android:padding="13dp"
+        android:src="@mipmap/icon_map_full_extent"
+        android:layout_alignTop="@+id/map_update_gps"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">成都千嘉智慧巡检</string>
+    <string name="app_name_text">成都千嘉智慧巡检</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_feedback_title">请输入遇到的问题或者建议...</string>
+    <string name="aes_code_error">密码加密|解密失败，请联系系统管理员</string>
+    <string name="version_update_new">当前已是最新版本</string>
+    <string name="data_no_more">当前已无更多数据</string>
+    <string name="null_text">未知</string>
+    <string name="login_title_text">巡线系统</string>
+    <string name="application_not_open">暂未开放，敬请期待！</string>
+    <!--权限相关-->
+    <string name="rationale_ask">权限未授予将导致部分功能无法使用，是否手动进入权限设置界面设置？</string>
+    <string name="rationale_ask_again">
+        权限未授予将导致部分功能无法使用，
+        是否手动进入权限设置界面设置？
+    </string>
+    <string name="title_settings_dialog">权限请求</string>
+    <string name="picture_error">照片加载失败，请重新选择照片</string>
+    <string name="data_null_error">暂无数据</string>
+    <string name="net_error">网络连接失败</string>
+
+    <!--指纹识别-->
+    <string name="biometricprompt_tip">Tip</string>
+    <string name="biometricprompt_fingerprint_verification">指纹验证</string>
+    <string name="biometricprompt_verify_fingerprint">请验证您的指纹。</string>
+    <string name="biometricprompt_verify_usepwd">输入密码</string>
+    <string name="biometricprompt_verify_success">验证成功</string>
+    <string name="biometricprompt_verify_failed">验证失败</string>
+    <string name="biometricprompt_verify_error_no_hardware">该设备不支持指纹识别。</string>
+    <string name="biometricprompt_cancel">取消</string>
+
+    <!--相册选择-->
+    <string name="app_drag_delete">拖动到此处删除</string>
+    <string name="app_let_go_drag_delete">松手即可删除</string>
+    <string name="app_wechat_send">发送</string>
+    <string name="app_wechat_send_num">发送(%1$d/%2$d)</string>
+</resources>

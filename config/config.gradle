@@ -1,0 +1,204 @@
+ext {
+
+    // 基础信息
+    android = [
+        appId : "com.cdqj.cdqjpatrolandroid",
+    ]
+
+    // app 相关版本控制
+    versions = [
+
+            sdkMinVersion     : 19,
+            sdkTargetVersion  : 28,
+
+            sdkCompileVersion : 28,
+            toolsBuildVersion : "28.0.0",
+
+            appVersionCode    : 18,
+            // 正式版本
+             appVersionName    : "1.2.1",
+    ]
+
+    cfgs = [
+            compileSdkVersion             : 29,
+            buildToolsVersion             : "28.0.3",
+            minSdkVersion                 : 19,
+            targetSdkVersion              : 29,
+            versionCode                   : 23,
+            versionName                   : "2.5.3",
+            ucropVersionCode              : 22,
+            ucropVersionName              : "2.2.0-native",
+
+            //open version control
+            androidSupportVersion         : "28.0.0",
+            version_recyclerview          : "28.0.0",
+            version_appcompat             : "28.0.0",
+
+            // okio
+            okio_version                  : "2.6.0",
+
+            // glide
+            glide_version                 : "4.7.1",
+
+            Doodle_version                : "5.5.3"
+    ]
+
+    // 依赖相关版本控制
+    depVersion = [
+            appCompatVersion : "28.0.0",
+            designVersion : "28.0.0",
+            okhttp3Version : "3.10.0",
+            okdownloadVersion : "1.0.4",
+            FlycoTabLayout_LibVersion : "2.1.2@aar",
+            dialogplusVersion : "1.11@aar",
+            ImagePreviewVersion : "2.2.2",
+            BaseRecyclerViewAdapterHelperVersion : "2.9.30",
+            PictureSelectorVersion : "v2.2.3",
+            easingVersion : "2.0@aar",
+            androidanimationsVersion : "2.3@aar",
+            recyclerview_animatorsVersion : "2.3.0",
+            junitVersion : "4.12",
+            leakcanaryVersion : "1.5.1",
+            test_espressoVersion : "3.0.2",
+            test_runnerVersion : "1.0.2",
+            butterknifeVersion : "8.8.1",
+            multidexVersion : "1.0.3",
+            constraintVersion : "1.1.0",
+            utilcodeVersion : "1.22.1",
+            annotations_java5Version : "15.0",
+            SmartRefreshLayoutVersion : "1.1.0-alpha-14",
+            rxpermissionsVersion : "0.9.5@aar",
+            retrofit2Version : "2.1.0",
+            converter_gsonVersion : "2.1.0",
+            adapter_rxjavaVersion : "2.1.0",
+            okhttpVersion : "3.8.1",
+            logging_interceptorVersion : "3.8.1",
+            stetho_okhttp3Version : "1.3.1",
+            rxjava2Version : "2.1.14",
+            rxandroid2Version : "2.0.2",
+            rxjavaVersion : "1.1.3",
+            rxandroidVersion : "1.1.0",
+            gsonVersion : "2.6.2",
+            slidinguppanelVersion : "3.4.0",
+//            arcgisVersion : "100.5.0",
+            arcgisVersion : "100.1.0",
+            pickerViewVersion : "4.1.6",
+            yinglanscrolllayoutVersion: "1.0.2",
+            rxandroidaudioVersion: "1.6.0",
+            backgroundVersion: "1.3.4",
+            eventbusVersion: "3.1.1",
+            jsbridgeVersion: "1.0.4",
+            barlibraryVersion: "2.3.0",
+            zxingVersion: "3.3.0",
+            loggerVersion: "1.15",
+
+    ]
+    // 依赖
+    deps = [
+            suport : [
+                    appcompat   : "com.android.support:appcompat-v7:${depVersion.appCompatVersion}",
+                    appcompatV4   : "com.android.support:support-v4:${depVersion.appCompatVersion}",
+                    annotations: "com.android.support:support-annotations:${depVersion.appCompatVersion}",
+                    // compile 'com.android.support:design:26.0.0-alpha1'
+                    design: "com.android.support:design:${depVersion.designVersion}",
+
+                    multidex: "com.android.support:multidex:${depVersion.multidexVersion}",
+
+                    constraint: "com.android.support.constraint:constraint-layout:${depVersion.constraintVersion}",
+
+                    junit: "junit:junit:${depVersion.junitVersion}",
+
+                    test_espresso: "com.android.support.test.espresso:espresso-core:${depVersion.test_espressoVersion}",
+                    test_runner: "com.android.support.test:runner:${depVersion.test_runnerVersion}",
+
+                    recyclerview_animators: "jp.wasabeef:recyclerview-animators:${depVersion.recyclerview_animatorsVersion}",
+
+                    //适配器
+                    BaseRecyclerViewAdapterHelper: "com.github.CymChad:BaseRecyclerViewAdapterHelper:${depVersion.BaseRecyclerViewAdapterHelperVersion}",
+
+                    butterknife: "com.jakewharton:butterknife:${depVersion.butterknifeVersion}",
+                    butterknifeCompiler: "com.jakewharton:butterknife-compiler:${depVersion.butterknifeVersion}",
+
+                    // FlycoTabLayout
+                    FlycoTabLayout_Lib: "com.flyco.tablayout:FlycoTabLayout_Lib:${depVersion.FlycoTabLayout_LibVersion}",
+
+                    okhttp3: "com.squareup.okhttp3:okhttp:${depVersion.okhttp3Version}",
+
+                    // okdownload core
+                    okdownload: "com.liulishuo.okdownload:okdownload:${depVersion.okdownloadVersion}",
+                    // provide okhttp to connect to backend
+                    okdownloadOk: "com.liulishuo.okdownload:okhttp:${depVersion.okdownloadVersion}",
+                    // provide sqlite to store breakpoints
+                    okdownloadSq: "com.liulishuo.okdownload:sqlite:${depVersion.okdownloadVersion}",
+
+                    utilcode: "com.blankj:utilcode:${depVersion.utilcodeVersion}",
+
+                    // dialogplus
+                    dialogplus: "com.orhanobut:dialogplus:${depVersion.dialogplusVersion}",
+
+                    easing: "com.daimajia.easing:library:${depVersion.easingVersion}",
+                    androidanimations: "com.daimajia.androidanimations:library:${depVersion.androidanimationsVersion}",
+
+                    annotations_java5: "org.jetbrains:annotations-java5:${depVersion.annotations_java5Version}",
+
+                    SmartRefreshLayout: "com.scwang.smartrefresh:SmartRefreshLayout:${depVersion.SmartRefreshLayoutVersion}",
+                    SmartRefreshHeader: "com.scwang.smartrefresh:SmartRefreshHeader:${depVersion.SmartRefreshLayoutVersion}",
+
+                    PictureSelector: "com.github.LuckSiege.PictureSelector:picture_library:${depVersion.PictureSelectorVersion}",
+
+                    //implementation 'com.github.bumptech.glide:glide:4.7.1'
+                    ImagePreview: "com.ycjiang:ImagePreview:${depVersion.ImagePreviewVersion}",
+
+                    leakcanary_android_no_op: "com.squareup.leakcanary:leakcanary-android-no-op:${depVersion.leakcanaryVersion}",
+                    leakcanary_android: "com.squareup.leakcanary:leakcanary-android:${depVersion.leakcanaryVersion}",
+
+                    rxpermissions: "com.tbruyelle.rxpermissions2:rxpermissions:${depVersion.rxpermissionsVersion}",
+                    rxjava: "io.reactivex:rxjava:${depVersion.rxjavaVersion}",
+                    rxandroid: "io.reactivex:rxandroid:${depVersion.rxandroidVersion}",
+                    rxjava2: "io.reactivex.rxjava2:rxjava:${depVersion.rxjava2Version}",
+                    rxandroid2: "io.reactivex.rxjava2:rxandroid:${depVersion.rxandroid2Version}",
+                    retrofit2: "com.squareup.retrofit2:retrofit:${depVersion.retrofit2Version}",
+                    converter_gson: "com.squareup.retrofit2:converter-gson:${depVersion.converter_gsonVersion}",
+                    adapter_rxjava: "com.squareup.retrofit2:adapter-rxjava:${depVersion.adapter_rxjavaVersion}",
+                    okhttp: "com.squareup.okhttp3:okhttp:${depVersion.okhttpVersion}",
+                    logging_interceptor: "com.squareup.okhttp3:logging-interceptor:${depVersion.logging_interceptorVersion}",
+                    stetho_okhttp3: "com.facebook.stetho:stetho-okhttp3:${depVersion.stetho_okhttp3Version}",
+                    gson: "com.google.code.gson:gson:${depVersion.gsonVersion}",
+                    // implementation 'com.orhanobut:logger:1.15'
+                    logger: "com.orhanobut:logger:${depVersion.loggerVersion}",
+
+                    slidinguppanel: "com.sothree.slidinguppanel:library:${depVersion.slidinguppanelVersion}",
+
+                    // 100.3.0
+                    arcgis: "com.esri.arcgisruntime:arcgis-android:${depVersion.arcgisVersion}",
+
+                    PickerView: "com.contrarywind:Android-PickerView:${depVersion.pickerViewVersion}",
+
+                    // implementation 'com.yinglan.scrolllayout:scrolllayout:1.0.2'
+                    yinglanscrolllayout: "com.yinglan.scrolllayout:scrolllayout:${depVersion.yinglanscrolllayoutVersion}",
+
+                    // api 'com.github.piasy:rxandroidaudio:1.5.3'
+                    // api 'com.github.piasy:AudioProcessor:1.5.3'
+                    rxandroidaudio: "com.github.piasy:rxandroidaudio:${depVersion.rxandroidaudioVersion}",
+                    AudioProcessor: "com.github.piasy:AudioProcessor:${depVersion.rxandroidaudioVersion}",
+
+                    // implementation 'com.noober.background:core:1.3.4'
+                    background: "com.noober.background:core:${depVersion.backgroundVersion}",
+
+                    // implementation 'org.greenrobot:eventbus:3.1.1'
+                    eventbus: "org.greenrobot:eventbus:${depVersion.eventbusVersion}",
+
+                    // implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+                    jsbridge: "com.github.lzyzsd:jsbridge:${depVersion.jsbridgeVersion}",
+
+                    // implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+                    barlibrary: "com.gyf.barlibrary:barlibrary:${depVersion.barlibraryVersion}",
+
+                    // implementation 'com.google.zxing:core:3.3.0'
+                    zxing: "com.google.zxing:core:${depVersion.zxingVersion}",
+
+            ]
+    ]
+}
+
+

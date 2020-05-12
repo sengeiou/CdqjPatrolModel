@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    style="@style/card_radius_style_2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/map_view_margin_8"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:id="@+id/log_item_send_user"
+        android:textColor="@color/text_theme"
+        android:textSize="@dimen/text_title_bar"
+        android:text="操作人"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/log_item_status"
+        android:layout_marginEnd="@dimen/map_view_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/log_item_send_user"
+        android:textSize="@dimen/text_auxiliary"
+        android:textColor="@color/red"
+        android:text="驳回"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/log_item_context"
+        android:layout_marginTop="@dimen/map_view_margin_8"
+        android:layout_width="0dp"
+        android:minHeight="@dimen/dp_40"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/dp_4"
+        android:text="这儿是描述信息"
+        android:textColor="@color/text_theme"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintLeft_toLeftOf="@+id/log_item_send_user"
+        app:layout_constraintRight_toRightOf="@+id/log_item_status"
+        app:layout_constraintTop_toBottomOf="@+id/log_item_send_user" />
+
+    <TextView
+        android:id="@+id/log_item_line"
+        android:background="@color/line"
+        android:layout_marginTop="@dimen/map_view_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_item_context"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:id="@+id/log_item_see_log"
+        android:textSize="@dimen/text_normal"
+        android:textColor="@color/text_theme"
+        android:layout_marginStart="@dimen/dp_2"
+        android:text="操作时间"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/map_view_margin_8"
+        android:layout_marginTop="@dimen/map_view_margin"
+        app:layout_constraintTop_toBottomOf="@+id/log_item_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/card_radius_style_2"
+    android:padding="@dimen/dp_15"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constraintRight_toLeftOf="@+id/plan_type"
+        android:gravity="center_vertical"
+        android:id="@+id/plan_area"
+        android:paddingStart="@dimen/map_view_margin_8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/text_theme"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="片区1-网格123456"
+        android:textSize="@dimen/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:layout_marginTop="@dimen/dp_2"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_4"
+        android:paddingLeft="@dimen/map_view_margin_8"
+        android:paddingRight="@dimen/map_view_margin_8"
+        android:gravity="center"
+        android:id="@+id/plan_type"
+        app:layout_constraintRight_toLeftOf="@+id/plan_audit_item_submit"
+        app:layout_constraintTop_toTopOf="@+id/plan_area"
+        app:layout_constraintBottom_toBottomOf="@+id/plan_area"
+        app:layout_constraintLeft_toRightOf="@+id/plan_area"
+        android:textColor="@color/theme_one"
+        android:text="代巡任务"
+        android:background="@drawable/stroke_bg_radius_plan_item_blue"
+        android:textSize="@dimen/text_auxiliary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingLeft="@dimen/dp_25"
+        android:paddingRight="@dimen/dp_25"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:gravity="center"
+        android:id="@+id/plan_audit_item_submit"
+        android:background="@drawable/stroke_bg_radius_order_item_theme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/plan_item_line"
+        android:textColor="@color/white"
+        android:text="通过"
+        android:textSize="@dimen/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintVertical_weight="2"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/map_view_margin_8"
+        android:id="@+id/plan_time"
+        app:layout_constraintLeft_toLeftOf="@+id/plan_area"
+        app:layout_constraintTop_toBottomOf="@+id/plan_area"
+        android:textColor="@color/text_auxiliary"
+        android:text="2018.01.01-8012.10.10"
+        android:textSize="@dimen/text_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/plan_item_line"
+        android:layout_marginStart="@dimen/map_view_margin_8"
+        android:layout_marginEnd="@dimen/map_view_margin_8"
+        app:layout_constraintLeft_toLeftOf="@+id/plan_area"
+        app:layout_constraintRight_toLeftOf="@+id/plan_audit_item_submit"
+        app:layout_constraintTop_toBottomOf="@+id/plan_time"
+        android:textColor="@color/text_auxiliary"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <TextView
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/plan_status"
+        android:layout_marginStart="@dimen/map_view_margin_8"
+        app:layout_constraintLeft_toLeftOf="@+id/plan_area"
+        app:layout_constraintRight_toLeftOf="@+id/plan_audit_item_report_time_title"
+        app:layout_constraintTop_toBottomOf="@+id/plan_item_line"
+        android:textColor="@color/text_black_view_title"
+        android:textSize="@dimen/text_normal"
+        android:text="执行人"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/map_view_margin_8"
+        android:layout_marginStart="@dimen/map_view_margin_8"
+        android:lines="1"
+        android:ellipsize="end"
+        android:id="@+id/plan_audit_item_report_people"
+        app:layout_constraintLeft_toLeftOf="@+id/plan_area"
+        app:layout_constraintRight_toRightOf="@+id/plan_status"
+        app:layout_constraintTop_toBottomOf="@+id/plan_status"
+        android:textColor="@color/text_theme"
+        android:textSize="@dimen/text_normal"
+        android:text="张三"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        app:layout_constraintHorizontal_weight="4"
+        android:id="@+id/plan_audit_item_report_time_title"
+        app:layout_constraintLeft_toRightOf="@+id/plan_status"
+        app:layout_constraintTop_toTopOf="@+id/plan_status"
+        app:layout_constraintRight_toLeftOf="@+id/plan_audit_item_submit_to"
+        app:layout_constraintBottom_toBottomOf="@+id/plan_status"
+        android:textColor="@color/text_black_view_title"
+        android:textSize="@dimen/text_normal"
+        android:text="任务量"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:lines="2"
+        android:ellipsize="end"
+        android:id="@+id/plan_audit_item_report_time"
+        app:layout_constraintLeft_toLeftOf="@+id/plan_audit_item_report_time_title"
+        app:layout_constraintRight_toRightOf="@+id/plan_audit_item_report_time_title"
+        app:layout_constraintTop_toTopOf="@+id/plan_audit_item_report_people"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/text_theme"
+        android:textSize="@dimen/text_normal"
+        android:text="阀门999个，中压管10km，低压管100km。。。"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        app:layout_constraintHorizontal_weight="2"
+        android:paddingLeft="@dimen/dp_25"
+        android:paddingRight="@dimen/dp_25"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:gravity="center"
+        android:id="@+id/plan_audit_item_submit_to"
+        app:layout_constraintLeft_toRightOf="@+id/plan_audit_item_report_time_title"
+        android:background="@drawable/stroke_bg_radius_plan_item_orange"
+        app:layout_constraintTop_toTopOf="@+id/plan_item_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/orange"
+        android:text="驳回"
+        android:textSize="@dimen/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_item_textView"
+        android:textSize="@dimen/text_small"
+        android:maxLines="1"
+        android:text="数据"
+        android:textColor="@color/text_auxiliary"
+        android:paddingTop="@dimen/map_view_margin"
+        android:paddingBottom="@dimen/map_view_margin"
+        android:gravity="center"/>
+
+</LinearLayout>

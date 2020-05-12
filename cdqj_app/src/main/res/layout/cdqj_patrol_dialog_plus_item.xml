@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:paddingStart="20dp"
+        android:padding="5dp"
+        android:id="@+id/dialog_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="名都苑施工地段"
+        android:textColor="@color/text_theme"
+        android:textSize="@dimen/text_normal"
+        />
+
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_item_name"
+        app:layout_constraintTop_toTopOf="@+id/dialog_item_name"
+        android:id="@+id/dialog_item_true"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="30dp"
+        android:src="@mipmap/icon_select_dialog_to"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/dialog_item_line"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_item_name"
+        android:background="@color/line"/>
+
+</android.support.constraint.ConstraintLayout>

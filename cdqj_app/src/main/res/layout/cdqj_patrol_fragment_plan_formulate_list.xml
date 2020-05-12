@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_plan_list_xml"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.PlanFormulateListFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                android:id="@+id/search_tab_rv"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/my_info_refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="@color/white"
+            android:layout_below="@+id/toolbar_line"
+            app:srlEnablePreviewInEditMode="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                    android:id="@+id/plan_formulate_list_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:itemCount="16"
+                    tools:layoutManager="LinearLayoutManager"
+                    tools:orientation="vertical"/>
+
+            </FrameLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <TextView
+            android:elevation="@dimen/elevation_dp"
+            android:id="@+id/plan_formulate_list_btn"
+            android:paddingStart="@dimen/dp_72"
+            android:paddingTop="@dimen/map_view_margin"
+            android:paddingBottom="@dimen/map_view_margin"
+            android:paddingEnd="@dimen/dp_72"
+            android:layout_marginBottom="@dimen/dp_72"
+            android:drawableLeft="@mipmap/icon_plan_task"
+            android:drawablePadding="@dimen/map_view_margin_8"
+            android:background="@drawable/stroke_bg_radius_them_round"
+            android:textColor="@color/white"
+            android:text="计划制定"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

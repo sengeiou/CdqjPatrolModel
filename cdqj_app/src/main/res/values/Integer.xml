@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="int_anim_time">200</integer>
+    <integer name="text_letter_spacing">5</integer>
+
+</resources>

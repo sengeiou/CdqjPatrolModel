@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion cfgs.compileSdkVersion
+    buildToolsVersion cfgs.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion cfgs.minSdkVersion
+        targetSdkVersion cfgs.targetSdkVersion
+        versionCode 24
+        versionName "2.2.4-non-native"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    resourcePrefix 'ucrop_'
+
+}
+
+dependencies {
+    implementation "com.android.support:appcompat-v7:${cfgs.version_appcompat}"
+    implementation "com.android.support:recyclerview-v7:${cfgs.version_recyclerview}"
+    //noinspection GradleDependency
+//    implementation "androidx.exifinterface:exifinterface:${cfgs.androidx_exifinterface_version}"
+    //noinspection GradleDependency
+//    implementation "androidx.transition:transition:${cfgs.androidx_transition_version}"
+}

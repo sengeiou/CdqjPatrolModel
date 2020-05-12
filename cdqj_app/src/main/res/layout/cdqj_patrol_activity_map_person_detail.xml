@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.MapPersonDetailActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+    <TextView
+        android:id="@+id/toolbar_line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:background="@color/line"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        app:layout_constraintBottom_toTopOf="@+id/map_person_space_to"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_line"
+        android:id="@+id/my_info_refreshLayout"
+        app:srlAccentColor="@color/white"
+        app:srlEnablePreviewInEditMode="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <include
+                android:layout_marginTop="@dimen/map_view_margin_8"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/map_view_margin"
+                android:layout_marginEnd="@dimen/map_view_margin"
+                android:id="@+id/map_person_info"
+                layout="@layout/cdqj_patrol_map_person_info"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:id="@+id/map_person_space"
+                android:layout_width="match_parent"
+                android:background="@color/line"
+                android:layout_height="1dp" />
+
+            <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+                android:id="@+id/map_person_detail_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/map_person_space_to"
+        android:layout_width="match_parent"
+        android:background="@color/line"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/map_detail_bottom_bar"
+        />
+
+    <include
+        android:layout_marginEnd="@dimen/map_view_margin"
+        android:layout_marginStart="@dimen/map_view_margin"
+        android:id="@+id/map_detail_bottom_bar"
+        android:layout_marginBottom="@dimen/map_view_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        layout="@layout/cdqj_patrol_map_detail_bottom_bar"/>
+</android.support.constraint.ConstraintLayout>

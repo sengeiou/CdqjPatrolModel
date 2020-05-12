@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+
+
+    <TextView
+        android:layout_below="@+id/simple_toolbar"
+        android:id="@+id/toolbar_line"
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <ScrollView
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_below="@+id/toolbar_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="提示:"
+                    android:textColor="#FF0000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv11"
+                    android:paddingTop="5dp"
+                    android:text="非专业人员请勿随意修改环境配置，否则后果自负" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/map_view_margin"
+                android:background="@color/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+
+            <LinearLayout
+                android:id="@+id/set_main_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="请求地址:" />
+
+                <!--
+                    android:text="http://172.16.128.19:8080/"
+                -->
+                <EditText
+                    android:text="http://172.16.102.227:10080/"
+                    android:id="@+id/set_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/set_main_file_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:text="文件服务器地址:" />
+
+                <!--
+                    android:text="http://172.16.128.19:8080/"
+                -->
+                <EditText
+                    android:text="http://172.16.102.227:10080/"
+                    android:id="@+id/set_file_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/btn_cs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/stroke_bg_radius_them_round"
+                android:layout_marginTop="8dp"
+                android:text="切换内网"
+                android:textSize="14sp" />
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/btn_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/stroke_bg_radius_them_round"
+                android:layout_marginTop="8dp"
+                android:text="切换外网"
+                android:textSize="14sp" />
+
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/btn_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/stroke_bg_radius_them_round"
+                android:layout_marginTop="8dp"
+                android:text="确认修改"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

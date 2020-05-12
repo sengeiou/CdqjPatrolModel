@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/map_view_margin"
+    android:paddingEnd="@dimen/map_view_margin">
+
+    <com.cdqj.cdqjpatrolandroid.base.BaseRecyclerView
+        android:id="@+id/hd_update_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</FrameLayout>

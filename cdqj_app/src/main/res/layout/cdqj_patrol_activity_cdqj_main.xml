@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.main.CdqjMainActivity">
+
+    <com.cdqj.cdqjpatrolandroid.comstomview.NoScrollViewPager
+        android:id="@+id/cdqj_main_vp"
+        tl:layout_constraintTop_toTopOf="parent"
+        tl:layout_constraintBottom_toTopOf="@+id/cdqj_main_tab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.flyco.tablayout.CommonTabLayout
+        tl:layout_constraintLeft_toLeftOf="parent"
+        tl:layout_constraintBottom_toBottomOf="parent"
+        tl:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/cdqj_main_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_bar_height"
+        android:background="@drawable/stroke_bg_main_bottom_bar"
+        tl:tl_iconHeight="@dimen/dp_25"
+        tl:tl_iconWidth="@dimen/dp_25"
+        tl:tl_indicator_color="@color/theme_one"
+        tl:tl_indicator_height="0dp"
+        tl:tl_textSelectColor="@color/theme_one"
+        tl:tl_textUnselectColor="#66000000"
+        tl:tl_textsize="@dimen/text_title"
+        tl:tl_underline_color="#DDDDDD"
+        tl:tl_underline_height="1dp"/>
+
+</android.support.constraint.ConstraintLayout>

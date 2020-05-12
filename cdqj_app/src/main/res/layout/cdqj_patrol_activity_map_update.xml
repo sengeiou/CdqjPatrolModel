@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.MapUpdateActivity">
+
+    <include layout="@layout/cdqj_patrol_head_title_bar"/>
+
+    <TextView
+        android:id="@+id/toolbar_space"
+        app:layout_constraintTop_toBottomOf="@+id/simple_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/toolbar_space"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/map_update_rv"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>

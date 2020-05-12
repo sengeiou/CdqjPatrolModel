@@ -1,0 +1,1 @@
+include ':app', ':ucrop', ':cdqj_app', ':picture_library'
