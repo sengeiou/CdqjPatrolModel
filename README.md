@@ -7,7 +7,7 @@
  `maven { url 'https://esri.bintray.com/arcgis' }`
 
 ## 2. APP build中添加最新版本
-导入`implementation 'com.github.liuyifang1121:CdqjPatrolModel:1.0.002'` 最新版本
+导入`implementation 'com.github.liuyifang1121:CdqjPatrolModel:1.0.000'` 最新版本
 
 ### 防止基础包冲突，android内添加
 
